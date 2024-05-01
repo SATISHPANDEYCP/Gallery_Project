@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   font-family: "Poppins", sans-serif;
@@ -44,39 +45,45 @@ body {
   align-items: center;
 }
 
+h1:hover {
+  color: gray;
+}
+
 .card img {
   height: 100%;
   width: 100%;
   filter: grayscale(100%);
   object-fit: cover;
+  transition: 1s;
 }
 
 .card:hover {
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 10px #333);
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px #333);
 }
 
 .card:hover img {
-    filter: grayscale(0);
+  filter: grayscale(0);
+  border-radius: 20px;
 }
 
-.card figcaption{
-    position: absolute;
-    bottom: 0;
-    width: fit-content;
-    height: 16%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-    color: #fff;
-    padding: 25px;
-    opacity: 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
+.card figcaption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  color: #fff;
+  padding: 25px;
+  opacity: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
 }
 
-.card:hover figcaption{
-    opacity: 1;
-    bottom: 40%;
-    transform: translateY(-50%) rotate(360deg);
-    transition: 1s;
+.card:hover figcaption {
+  opacity: 1;
+  bottom: 10%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: 1s;
 }
